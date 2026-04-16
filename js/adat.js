@@ -1,4 +1,4 @@
-const termekek = [
+export const termekek = [
   {
     src: "src/kep.jpg",
     nev: "Okostelefon X1",
