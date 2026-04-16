@@ -8,16 +8,20 @@ export default class Kartya {
   }
 
   megjelenit() {
-    let kod = `
-        <div class="kartya">
-            <img src="${this.#obj.src}" alt="${this.#obj.nev}">
-            <h2>${this.#obj.nev}</h2>
-            <p>${this.#obj.leiras}</p>
-            <span>${this.#obj.ar} Ft</span>
+  let kod = `
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 shadow">
+        <img src="${this.#obj.src}" class="card-img-top" alt="${this.#obj.nev}">
+        <div class="card-body">
+          <h5 class="card-title">${this.#obj.nev}</h5>
+          <p class="card-text">${this.#obj.leiras}</p>
+          <span class="fw-bold">${this.#obj.ar} Ft</span>
         </div>
-        `;
-    this.#szuloElem.innerHTML += kod;
-  }
+      </div>
+    </div>
+  `;
+  this.#szuloElem.querySelector(".row").innerHTML += kod;
+}
 
   esemenyKezelo() {
     this.#szuloElem.addEventListener("click", () => {
