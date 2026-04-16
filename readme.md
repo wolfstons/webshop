@@ -11,8 +11,9 @@ classDiagram
     class Kartya {
         -obj : object
         -szuloElem
-        +megjelenit() void
+        -index: int
         +constructor(obj, szuloElem) void
+        +megjelenit() void
         +esemenyKezelo() event
     }
     Kartyak --> Kartya
@@ -22,13 +23,16 @@ classDiagram
         -szuloElem : html DOM
         +constructor(szuloElem, adatLista)
         +megjelenit() void
-        +ad() event
+       
     }
     class Kocka {
         -obj : object
-        -szuloElem
+        -szuloElem: html DOM
+        -index: int
         +megjelenit() void
         +constructor(obj, szuloElem) void
-        +esemenyKezelo(torles) event
+        +esemenyKezeloSzerk() event
+        +esemenyKezeloTorlo() event
+        
     }
     Tabla --> Kocka
