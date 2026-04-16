@@ -9,8 +9,8 @@ export default class Kartyak {
     this.megjelenit();
   }
   megjelenit() {
-    this.#adatLista.forEach((adat) => {
-      let k=new Kartya(this.#szuloElem,adat)
+    this.#adatLista.forEach((adat,index) => {
+      let k=new Kartya(this.#szuloElem,adat,index)
       
     });
   }
