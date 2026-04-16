@@ -1,3 +1,5 @@
+import Kartya from "./Kartya.js";
+
 export default class Kartyak {
   #adatLista;
   #szuloElem;
@@ -8,15 +10,8 @@ export default class Kartyak {
   }
   megjelenit() {
     this.#adatLista.forEach((adat) => {
-      const elem = document.createElement("div");
-      elem.classList.add("kartya");
-      elem.innerHTML = `
-                <img src="${adat.src}" alt="${adat.nev}">
-                <h2>${adat.nev}</h2>
-                <p>${adat.leiras}</p>
-                <span>${adat.ar} Ft</span>
-            `;
-      this.#szuloElem.appendChild(elem);
+      let k=new Kartya(this.#szuloElem,adat)
+      
     });
   }
 }
