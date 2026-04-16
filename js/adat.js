@@ -3,60 +3,62 @@ const termekek = [
     src: "src/kep.jpg",
     nev: "Okostelefon X1",
     ar: 129990,
-    leiras: "Modern okostelefon nagy felbontású kijelzővel és gyors processzorral."
+    leiras:
+      "Modern okostelefon nagy felbontású kijelzővel és gyors processzorral.",
   },
   {
     src: "src/kep.jpg",
     nev: "Laptop Pro 15",
     ar: 349990,
-    leiras: "Erőteljes laptop munkához és játékhoz, hosszú akkumulátor idővel."
+    leiras: "Erőteljes laptop munkához és játékhoz, hosszú akkumulátor idővel.",
   },
   {
     src: "src/kep.jpg",
     nev: "Vezeték nélküli fülhallgató",
     ar: 24990,
-    leiras: "Kényelmes és kiváló hangzású bluetooth fülhallgató."
+    leiras: "Kényelmes és kiváló hangzású bluetooth fülhallgató.",
   },
   {
     src: "src/kep.jpg",
     nev: "Okosóra Fit",
     ar: 39990,
-    leiras: "Egészségfigyelő funkciókkal ellátott stílusos okosóra."
+    leiras: "Egészségfigyelő funkciókkal ellátott stílusos okosóra.",
   },
   {
     src: "src/kep.jpg",
     nev: "Tablet Plus",
     ar: 89990,
-    leiras: "Könnyű és gyors tablet szórakozáshoz és munkához."
+    leiras: "Könnyű és gyors tablet szórakozáshoz és munkához.",
   },
   {
     src: "src/kep.jpg",
     nev: "Bluetooth hangszóró",
     ar: 19990,
-    leiras: "Hordozható hangszóró erőteljes basszussal."
+    leiras: "Hordozható hangszóró erőteljes basszussal.",
   },
   {
     src: "src/kep.jpg",
     nev: "Gaming egér",
     ar: 14990,
-    leiras: "Precíz és gyors válaszidejű egér játékosoknak."
+    leiras: "Precíz és gyors válaszidejű egér játékosoknak.",
   },
   {
     src: "src/kep.jpg",
     nev: "Mechanikus billentyűzet",
     ar: 29990,
-    leiras: "Tartós és kényelmes billentyűzet RGB világítással."
+    leiras: "Tartós és kényelmes billentyűzet RGB világítással.",
   },
   {
     src: "src/kep.jpg",
     nev: "Full HD monitor",
     ar: 69990,
-    leiras: "Éles kép és széles látószögű kijelző irodai és otthoni használatra."
+    leiras:
+      "Éles kép és széles látószögű kijelző irodai és otthoni használatra.",
   },
   {
     src: "src/kep.jpg",
     nev: "Külső SSD 1TB",
     ar: 45990,
-    leiras: "Gyors adatátvitel és nagy tárhely hordozható kivitelben."
-  }
+    leiras: "Gyors adatátvitel és nagy tárhely hordozható kivitelben.",
+  },
 ];
