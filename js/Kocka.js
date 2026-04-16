@@ -7,27 +7,42 @@ export default class Kocka {
         this.#obj = obj;
         this.#szuloElem = szuloElem;
         this.megjelenit();
-        this.esemenyKezelo();
+        this.esemenyKezeloSzerk();
+        this.esemenyKezeloTorlo();
     }
 
     megjelenit(){
         let kod = `
                 
-           <tr>
-                <td><img src="${this.#obj.src}" alt="${this.#obj.nev}"></td>
-                <td>${this.#obj.nev}</td>
-                <td>${this.#obj.leiras}</td>
-                <td>${this.#obj.ar} Ft</td>
-                <td>
-                    <button class="szerk">⚙️</button>
-                    <button class="torles">❌</button>
-                </td>
-            </tr>
+           
+               <tr class="sor">
+                    <td><img class="rounded" width="200px" src="${this.#obj.src}" alt="${this.#obj.nev}"></td>
+                    <td>${this.#obj.nev}</td>
+                    <td>${this.#obj.leiras}</td>
+                    <td>${this.#obj.ar} Ft</td>
+                    <td>
+                        <button class="szerk">⚙️</button>
+                        <button class="torles">❌</button>
+                    </td>
+                </tr>
+        
         `
         this.#szuloElem.insertAdjacentHTML("beforeend", kod);
     }
 
-    esemenyKezelo(){
-        this.gombElem
+    esemenyKezeloSzerk(){
+        const gombElem = document.querySelector(".sor:last-child .szerk");
+        gombElem.addEventListener("click", () => {
+        const e = new CustomEvent("szerk", { detail: this.#obj }); 
+        window.dispatchEvent(e); 
+        });
+    }
+
+    esemenyKezeloTorlo(){
+        const gombElem = document.querySelector(".sor:last-child .torles");
+        gombElem.addEventListener("click", () => {
+        const e = new CustomEvent("torles", { detail: this.#obj }); 
+        window.dispatchEvent(e); 
+        });
     }
 }

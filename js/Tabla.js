@@ -15,7 +15,4 @@ export default class Tabla{
         })
     }
 
-    ad(){
-
-    }
 }
