@@ -1,3 +1,4 @@
+import Kocka from "./Kocka.js";
 
 export default class Tabla{
     #adatLista = [];
@@ -10,7 +11,7 @@ export default class Tabla{
 
     megjelenit(){
         this.#adatLista.forEach((index, adat) =>{
-            new Kocka(index, adat, szuloElem);
+            let k = new Kocka(adat, index, this.#szuloElem);
         })
     }
 
