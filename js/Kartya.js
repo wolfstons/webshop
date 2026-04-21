@@ -12,7 +12,7 @@ export default class Kartya {
 
   esemenyKezelo() {
     const buttonElem = document.querySelector(".kartya:last-child button");
-    console.log(buttonElem)
+    
     buttonElem.addEventListener("click", () => {
        const e = new CustomEvent("kosarba", { detail: this.#obj }); 
       window.dispatchEvent(e); 
