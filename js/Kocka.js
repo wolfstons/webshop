@@ -28,10 +28,11 @@ export default class Kocka {
         
         `
         this.#szuloElem.insertAdjacentHTML("beforeend", kod);
+        this.sorElem = this.#szuloElem.querySelector(".sor:last-child");
     }
 
     esemenyKezeloSzerk(){
-        const gombElem = document.querySelector(".sor:last-child .szerk");
+        const gombElem = this.sorElem.querySelector(".szerk");
         gombElem.addEventListener("click", () => {
         const e = new CustomEvent("szerk", { detail: this.#obj }); 
         window.dispatchEvent(e); 
@@ -39,10 +40,9 @@ export default class Kocka {
     }
 
     esemenyKezeloTorlo(){
-        const gombElem = document.querySelector(".sor:last-child .torles");
+        const gombElem = this.sorElem.querySelector(".torles");
         gombElem.addEventListener("click", () => {
-        const e = new CustomEvent("torles", { detail: this.#obj }); 
-        window.dispatchEvent(e); 
+            this.sorElem.remove();
         });
     }
 }
