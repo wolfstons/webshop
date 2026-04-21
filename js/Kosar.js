@@ -1,15 +1,17 @@
 export default class Kosar {
-  constructor(src, nev, ar, leiras, kosarElem, KosarLista) {
+  constructor(src, nev, ar, leiras, kosarElem, kosarLista) {
     this.src = src;
     this.nev = nev;
     this.ar = ar;
     this.leiras = leiras;
     this.kosarElem = kosarElem;
-    this.KosarLista = KosarLista;
+    this.kosarLista = kosarLista;
+    console.log(this.kosarLista)
     this.megjelenit();
   }
 
   megjelenit() {
+
     let kod = `<div class="col-md-4 mb-3 kartya">
         <div class="card h-100 shadow">
         <img src="${this.src}" class="card-img-top" alt="${this.nev}">
