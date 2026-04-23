@@ -42,7 +42,9 @@ export default class Kocka {
     esemenyKezeloTorlo(){
         const gombElem = this.sorElem.querySelector(".torles");
         gombElem.addEventListener("click", () => {
-            this.sorElem.remove();
+            if (window.confirm("Biztosan törölni szeretnéd?")) {
+                this.sorElem.remove();
+            }
         });
     }
 }
